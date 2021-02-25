@@ -6,7 +6,7 @@ XEN_REL="unstable"
 
 XEN_BRANCH = "master"
 
-SRCREV = "${AUTOREV}"
+SRCREV = "ba62d9e360f830ed21daaec7205339bc312f2e56"
 
 EXTRA_OEMAKE += " CONFIG_QEMU_XEN=n"
 
