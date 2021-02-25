@@ -48,13 +48,25 @@ FILES_${PN}-xendiag += " \
     ${sbindir}/xen-diag \
     "
 
+FILES_${PN}-xenmon += "\
+    ${sbindir}/xenmon \
+"
+
+FILES_${PN}-fs += "\
+        ${libdir}/libxenfsimage.so.* \
+        ${libdir}/xenfsimage/* \
+"
+
+
+#${PN}-libxendevicemodel 
+#    ${PN}-libxendevicemodel-dev 
 PACKAGES_append = "\
-    ${PN}-libxendevicemodel \
-    ${PN}-libxendevicemodel-dev \
     ${PN}-libxentoolcore \
     ${PN}-libxentoolcore-dev \
     ${PN}-pkgconfig \
     ${PN}-xendiag \
+    ${PN}-xenmon \
+    ${PN}-fs\
     "
 
 RDEPENDS_${PN}-base_remove = "\
@@ -63,3 +75,8 @@ RDEPENDS_${PN}-base_remove = "\
     ${PN}-libvhd \
     "
 
+
+RDEPENDS_${PN}-base_append = "\
+     ${PN}-xenmon \
+     ${PN}-fs\
+  "   
