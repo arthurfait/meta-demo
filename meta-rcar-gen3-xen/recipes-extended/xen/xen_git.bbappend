@@ -52,12 +52,15 @@ FILES_${PN}-xenmon += "\
     ${sbindir}/xenmon \
 "
 
-FILES_${PN}-fsimage += "\
+FILES_${PN}-libfsimage += "\
         ${libdir}/libxenfsimage.so.* \
+"
+
+FILES_${PN}-fsimage += "\
         ${libdir}/xenfsimage/* \
 "
 
-FILES_${PN}-fsimage-dev += "\
+FILES_${PN}-libfsimage-dev += "\
         ${libdir}/libxenfsimage.so \
 "
 
