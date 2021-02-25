@@ -52,12 +52,12 @@ FILES_${PN}-xenmon += "\
     ${sbindir}/xenmon \
 "
 
-FILES_${PN}-xenfsimage += "\
+FILES_${PN}-fsimage += "\
         ${libdir}/libxenfsimage.so.* \
         ${libdir}/xenfsimage/* \
 "
 
-FILES_${PN}-xenfsimage-dev += "\
+FILES_${PN}-fsimage-dev += "\
         ${libdir}/libxenfsimage.so \
 "
 
@@ -73,8 +73,6 @@ PACKAGES_append = "\
     ${PN}-libxentoolcore-dev \
     ${PN}-pkgconfig \
     ${PN}-xendiag \
-    ${PN}-xenfsimage \
-    ${PN}-xenfsimage-dev \
     ${PN}-depriv-fd-checker \
     "
 
@@ -85,6 +83,3 @@ RDEPENDS_${PN}-base_remove = "\
     "
 
 
-RDEPENDS_${PN}-base_append = "\
-     ${PN}-xenfsimage \
-  "   
