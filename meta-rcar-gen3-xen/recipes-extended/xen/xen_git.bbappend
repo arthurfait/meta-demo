@@ -73,7 +73,6 @@ PACKAGES_append = "\
     ${PN}-libxentoolcore-dev \
     ${PN}-pkgconfig \
     ${PN}-xendiag \
-    ${PN}-xenmon \
     ${PN}-xenfsimage \
     ${PN}-xenfsimage-dev \
     ${PN}-depriv-fd-checker \
