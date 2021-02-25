@@ -2,11 +2,13 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 DEPENDS += "u-boot-mkimage-native"
 
-XEN_REL="unstable"
+XEN_REL="4.12"
 
-XEN_BRANCH = "master"
+XEN_BRANCH = "stable-${XEN_REL}"
 
-SRCREV = "ba62d9e360f830ed21daaec7205339bc312f2e56"
+SRCREV = "${AUTOREV}"
+
+DEPENDS_remove = "dev86-native"  
 
 EXTRA_OEMAKE += " CONFIG_QEMU_XEN=n"
 
